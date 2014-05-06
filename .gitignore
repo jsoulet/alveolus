@@ -1,5 +1,8 @@
-logs/*
+.DS_Store
 !.gitkeep
 
-app/img/.DS_Store
-app/.DS_Store
+bower_components
+node_modules
+.sass-cache
+
+logs/*

@@ -1,0 +1,23 @@
+{
+  "name": "alveolus",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jsoulet/alveolus",
+  "authors": [
+    "Johan Soulet <johan.soulet@gmail.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16"
+  },
+  "devDependencies": {
+    "requirejs": "~2.1.11"
+  }
+}
