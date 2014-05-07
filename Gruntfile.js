@@ -9,10 +9,12 @@ module.exports = function(grunt) {
         }
       }
     },
-    sass: {
+    compass: {
       dist: {
         options: {
-          style: 'expanded'
+          cssDir: 'app/css',
+          sassDir: 'app/scss',
+          outputStyle: 'expanded'
         },
         files: [{
           'expand': true,
@@ -40,12 +42,11 @@ module.exports = function(grunt) {
         options: {
             baseUrl: './app/js/src',
             paths: {
-              'angular': '../../../bower_components/angular/angular',
-              'angularRoute': '../../../bower_components/angular-route/angular-route'
-            },
-            shim: {
-              'angular' : {'exports' : 'angular'},
-              'angularRoute': ['angular']
+              angular: 'empty:',
+              ngRoute: 'empty:',
+              jquery: 'empty:',
+              bootstrap: 'empty:'
+
             },
             // optimize: 'uglify2',
             optimize: 'none',
@@ -76,12 +77,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'requirejs']);
-  grunt.registerTask('styles', ['sass', 'autoprefixer']);
+  grunt.registerTask('default', ['compass', 'autoprefixer', 'requirejs']);
+  grunt.registerTask('styles', ['compass', 'autoprefixer']);
   grunt.registerTask('scripts', ['scripts']);
 
 };

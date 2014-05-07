@@ -15,9 +15,11 @@
   ],
   "dependencies": {
     "angular": "~1.2.16",
-    "angular-route": "~1.2.16"
+    "angular-route": "~1.2.16",
+    "bootstrap-sass-official": "~3.1.1+2"
   },
   "devDependencies": {
-    "requirejs": "~2.1.11"
+    "requirejs": "~2.1.11",
+    "jquery": "~2.1.1"
   }
 }
